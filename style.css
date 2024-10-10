@@ -1,0 +1,124 @@
+/* updated style shett after requirement revision */ 
+/* @media is here to allow different device responsiveness.
+but was nodified to maintain image at 300px */ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+.outer-container {
+    width: 340px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black; 
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    background-color: white;
+    overflow: hidden;
+}
+
+
+.maintitle {
+    width: 100%;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.maintitle h1 {
+    font-size: 1.8rem;
+    font-style: italic;
+    text-shadow: 2px 2px 5px darkred;
+}
+
+.imgcn {
+    width: 300px; 
+    border: 1px solid black; /* Finer 1px border */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.imgcn img {
+    width: 300px; /* Image stays at 300px */
+    border-radius: 8px;
+}
+
+.bottom-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: 1px dotted black;
+    height: auto;
+    margin-top: 20px;
+}
+
+.description {
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.info ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 15px;
+}
+
+.info ul li {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.about p {
+    text-align: justify;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .outer-container {
+        width: 100%;
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .maintitle h1 {
+        font-size: 1.5rem;
+    }
+
+    .bottom-container {
+        padding: 15px;
+    }
+
+    .imgcn {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+@media (min-width: 1200px) {
+    .outer-container {
+        max-width: 400px;
+        padding: 25px;
+    }
+}
